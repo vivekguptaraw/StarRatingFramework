@@ -55,8 +55,6 @@ playground.xcworkspace\
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control\
 #\
 Pods/\
-#Frameworks/ZapparEmbed/ZapparEmbed.framework/Versions/A/ZapparEmbed\
-#Frameworks/XperielFramework/libxperiel.a\
 *.lock\
 *.lock\
 \
