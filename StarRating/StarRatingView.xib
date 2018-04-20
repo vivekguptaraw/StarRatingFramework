@@ -12,8 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StarRatingView" customModule="StarRating" customModuleProvider="target">
             <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="ratingWillBeSetFromOutSide">
+                    <real key="value" value="0.0"/>
+                </userDefinedRuntimeAttribute>
                 <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
-                    <color key="value" red="1" green="0.2115022454236789" blue="0.20078672830794131" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="value" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
@@ -39,22 +42,62 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3RH-JF-cTG" customClass="star" customModule="StarRating" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="100" height="240.5"/>
                                     <color key="backgroundColor" red="1" green="0.1065594943" blue="0.087042581059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="yellowGrad">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                            <color key="value" red="1" green="0.1065594943" blue="0.087042581059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y2W-Mj-jiM" customClass="star" customModule="StarRating" customModuleProvider="target">
                                     <rect key="frame" x="100" y="0.0" width="100" height="240.5"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="yellowGrad">
+                                            <real key="value" value="0.69999999999999996"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                            <color key="value" red="0.99942404029999998" green="0.79810793537222224" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mjO-zc-D9y" customClass="star" customModule="StarRating" customModuleProvider="target">
                                     <rect key="frame" x="200" y="0.0" width="100" height="240.5"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="yellowGrad">
+                                            <real key="value" value="0.40000000000000002"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                            <color key="value" red="0.58081901069999997" green="0.223437391225" blue="0.59335167539722222" alpha="0.83743578767123283" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N0t-D9-gAo" customClass="star" customModule="StarRating" customModuleProvider="target">
                                     <rect key="frame" x="300" y="0.0" width="100" height="240.5"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                            <color key="value" red="1" green="0.099338107638888895" blue="0.75204081960000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="yellowGrad">
+                                            <real key="value" value="0.5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hzj-ar-6q1" customClass="star" customModule="StarRating" customModuleProvider="target">
                                     <rect key="frame" x="400" y="0.0" width="100" height="240.5"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="yellowGrad">
+                                            <real key="value" value="0.69999999999999996"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                            <color key="value" red="0.35085434430000001" green="0.95869075586388897" blue="0.61363670950000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </view>
                             </subviews>
                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -20,7 +20,7 @@ protocol StarRatingDelegate {
     func setRating(with point: Any)
 }
 
-@IBDesignable public class StarRatingView: UIView, UIGestureRecognizerDelegate {
+@IBDesignable class StarRatingView: UIView, UIGestureRecognizerDelegate {
 
     @IBOutlet var contentVw: UIView!
     @IBOutlet weak var star5: star!
@@ -34,11 +34,19 @@ protocol StarRatingDelegate {
     var dragDirection: DragDirection = .None
     var starRatingDelegate: StarRatingDelegate?
     @IBInspectable public var selectedColor: UIColor = UIColor.red{
-        willSet{
-            selectedColor = newValue
-        }
+        
         didSet{
             setUptSelectedColor()
+        }
+    }
+    
+   @IBInspectable var ratingWillBeSetFromOutSide: Float = 2.0{
+    willSet{
+        ratingWillBeSetFromOutSide = newValue
+    }
+        didSet{
+            self.setUptSelectedColor()
+            //self.setStarGradientFromIBInspec(value: ratingWillBeSetFromOutSide)
         }
     }
     
@@ -49,7 +57,7 @@ protocol StarRatingDelegate {
         
     }
     
-    required public init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.customInit()
         panGesture = UIPanGestureRecognizer(target: self, action: #selector(StarRatingView.handlePanGesture))
@@ -156,6 +164,16 @@ protocol StarRatingDelegate {
         }
     }
     
+    func setStarGradientFromIBInspec(value: Float){
+        var pt = value
+        if value > 5.0{
+            pt = 5.0
+        }
+        let starNum = floor(pt) + 1 > 5 ? 5 : floor(pt) + 1
+        self.setStarGradient(starNum: CGFloat(starNum), loc: CGFloat(pt))
+        
+    }
+    
     func setStarGradient(starNum: CGFloat, loc: CGFloat){
         var _loc = Float(loc)
         if starNum == 1{
@@ -188,7 +206,7 @@ protocol StarRatingDelegate {
             self.star2.yellowGrad = Float(1)
             self.star3.yellowGrad = Float(1)
             self.star4.yellowGrad = Float(1)
-            self.star5.yellowGrad = _loc > 5.0 ? 5 : Float(loc - floor(loc))
+            self.star5.yellowGrad = _loc >= 5.0 ? Float(1) : Float(loc - floor(loc))
              print("Star 5 \(_loc)")
         }
         if _loc > 5.0 {
@@ -218,28 +236,48 @@ protocol StarRatingDelegate {
     }
     
     func customInit(){
-        Bundle.main.loadNibNamed("StarRatingView", owner: self, options: nil);
-        self.addSubview(contentVw)
-        self.contentVw.frame = self.bounds;
+//        Bundle.main.loadNibNamed("StarRatingView", owner: self, options: nil);
+//        self.addSubview(contentVw)
+//        self.contentVw.frame = self.bounds;
+        if self.subviews.count == 0 {
+            print("Loading Nib StarRatingView")
+            //let bundle = Bundle(forClass: self.dynamicType)
+            let bundle = Bundle(for: type(of: self))
+            let nib = UINib(nibName: "StarRatingView", bundle: bundle)
+            contentVw = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
+            contentVw.frame = bounds
+            contentVw.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            addSubview(contentVw)
+        }
     }
     
-    override public func prepareForInterfaceBuilder() {
+    override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         customInit()
+        setUptSelectedColor()
         contentVw.prepareForInterfaceBuilder()
+        
     }
     
-    override public func draw(_ rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         super.draw(rect)
         //self.selectedColor = UIColor.purple
     }
     
-    override public func awakeFromNib() {
+    override func awakeFromNib() {
         super.awakeFromNib()
     }
     
     func setFillStarAtLocation(index: Int, gradientValue: Float){
         
+    }
+    
+    func setInitialGradient(val: Float){
+        star1.yellowGrad = 0.0
+        star2.yellowGrad = 0.0
+        star3.yellowGrad = 0.0
+        star4.yellowGrad = 0.0
+        star5.yellowGrad = 0.0
     }
     
     func setUptSelectedColor(){
@@ -249,11 +287,7 @@ protocol StarRatingDelegate {
             star3.selectedColor = selectedColor
             star4.selectedColor = selectedColor
             star5.selectedColor = selectedColor
-            star1.yellowGrad = 0.0
-            star2.yellowGrad = 0.0
-            star3.yellowGrad = 0.0
-            star4.yellowGrad = 0.0
-            star5.yellowGrad = 0.0
+            self.setStarGradientFromIBInspec(value: self.ratingWillBeSetFromOutSide)
         }
     }
 

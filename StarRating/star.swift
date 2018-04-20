@@ -24,20 +24,13 @@ import UIKit
         addStars(yellowGrad: yellowGrad, whiteGrad: whiteGrad)
     }
     
-    var selectedColor: UIColor = UIColor.red {
+    @IBInspectable var selectedColor: UIColor = UIColor.red {
         willSet
         {
                 selectedColor = newValue
         }
         didSet {            
-            if let layers = self.contentVw.layer.sublayers{
-                if layers.count > 0{
-                    if let oldGradLayer = layers[0] as? CAGradientLayer{
-                        oldGradLayer.removeFromSuperlayer()
-                        addStars(yellowGrad: yellowGrad, whiteGrad: whiteGrad)
-                    }
-                }
-            }
+                self.checkExstingLayer()
         }
     }
     @IBInspectable var yellowGrad: Float = 0.5{
@@ -46,16 +39,17 @@ import UIKit
             yellowGrad = newValue
         }
         didSet {
-            if let _ = self.contentVw{
-                if let layers = self.contentVw.layer.sublayers{
-                    if layers.count > 0{
-                        if let oldGradLayer = layers[0] as? CAGradientLayer{
-                            oldGradLayer.removeFromSuperlayer()
-                            addStars(yellowGrad: yellowGrad, whiteGrad: whiteGrad)
-                        }
-                    }
-                }
-            }
+            self.checkExstingLayer()
+//            if let _ = self.contentVw{
+//                if let layers = self.contentVw.layer.sublayers{
+//                    if layers.count > 0{
+//                        if let oldGradLayer = layers[0] as? CAGradientLayer{
+//                            oldGradLayer.removeFromSuperlayer()
+//                            addStars(yellowGrad: yellowGrad, whiteGrad: whiteGrad)
+//                        }
+//                    }
+//                }
+//            }
             
         }
     }
@@ -66,6 +60,19 @@ import UIKit
         }
         didSet {
             
+        }
+    }
+    
+    func checkExstingLayer(){
+        if self.contentVw != nil{
+            if let layers = self.contentVw.layer.sublayers{
+                if layers.count > 0{
+                    if let oldGradLayer = layers[0] as? CAGradientLayer{
+                        oldGradLayer.removeFromSuperlayer()
+                        addStars(yellowGrad: yellowGrad, whiteGrad: whiteGrad)
+                    }
+                }
+            }
         }
     }
     
@@ -125,10 +132,37 @@ import UIKit
     }
     
     func customInitStar(){
-        Bundle.main.loadNibNamed("star", owner: self, options: nil);
-        self.addSubview(contentVw)
-        self.contentVw.frame = self.bounds;
+//        Bundle.main.loadNibNamed("star", owner: self, options: nil);
+//        self.addSubview(contentVw)
+//        self.contentVw.frame = self.bounds;
+        if self.subviews.count == 0 {
+            print("Loading Nib")
+            //let bundle = Bundle(forClass: self.dynamicType)
+            let bundle = Bundle(for: type(of: self))
+            let nib = UINib(nibName: "star", bundle: bundle)
+            contentVw = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
+            contentVw.frame = bounds
+            contentVw.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            addSubview(contentVw)
+        }
     }
+    
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        customInitStar()
+        addStars(yellowGrad: yellowGrad, whiteGrad: whiteGrad)
+        contentVw.prepareForInterfaceBuilder()
+    }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        //self.selectedColor = UIColor.purple
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
 
 }
 

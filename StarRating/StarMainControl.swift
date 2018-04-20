@@ -8,7 +8,13 @@
 
 import UIKit
 
-public class StarMainControl: UIView {
+protocol StarMainControlDelegate {
+    func buttonClicked(with tag: Int, buttonText: String?, ratePoints: Float?)
+}
+
+
+@IBDesignable
+class StarMainControl: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -27,6 +33,8 @@ public class StarMainControl: UIView {
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet var contentView: UIView!
     var actionsCreated: (() -> Void)?
+    var starMainControlDelegate: StarMainControlDelegate?
+    var finaRating: Float = 0.0
     @IBInspectable var titleText: String = ""{
         didSet{
             if self.titleLabel != nil{
@@ -57,7 +65,23 @@ public class StarMainControl: UIView {
             }
         }
     }
-    @IBInspectable var totalActions: Int = 2{
+    @IBInspectable public var ratingInspectable: Float = 0.0{
+        didSet{
+            if self.ratePoints != nil{
+                self.ratePoints.text = String(ratingInspectable)
+                self.starControl.ratingWillBeSetFromOutSide = ratingInspectable
+                self.finaRating = ratingInspectable
+            }
+        }
+    }
+    @IBInspectable public var selectedColor: UIColor = UIColor.yellow{
+        didSet{
+            if self.starControl != nil{
+                self.starControl.selectedColor = selectedColor
+            }
+        }
+    }
+     var totalActions: Int = 2{
         didSet{
             if actions.count > 2{
                 setActions(count: totalActions)
@@ -66,7 +90,7 @@ public class StarMainControl: UIView {
         }
     }
     
-    @IBInspectable public var actions: [String] = []{
+     var actions: [String] = []{
         didSet{
             if actions.count > 2{
                 totalActions = actions.count
@@ -80,14 +104,14 @@ public class StarMainControl: UIView {
         self.customInit()
     }
     
-    required public init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.customInit()
         self.setData()
     }
     
     func setData(){
-        self.starControl.selectedColor = UIColor.red
+        //self.starControl.selectedColor = UIColor.red
         self.starControl.starRatingDelegate = self
         self.checkTitleAndDescription()
     }
@@ -129,14 +153,47 @@ public class StarMainControl: UIView {
     }
     
     @objc func btnTouch(_ sender: UIButton){
+        self.starMainControlDelegate?.buttonClicked(with: sender.tag, buttonText: sender.titleLabel?.text, ratePoints: self.finaRating)
+    }
+    @IBAction func cancelClicked(_ sender: UIButton) {
+        self.starMainControlDelegate?.buttonClicked(with: sender.tag, buttonText: sender.titleLabel?.text, ratePoints: self.finaRating)
+    }
+    
+    @IBAction func rateNowClicked(_ sender: UIButton) {
+        self.starMainControlDelegate?.buttonClicked(with: sender.tag, buttonText: sender.titleLabel?.text, ratePoints: self.finaRating)
+    }
+    func customInit(){
+//        Bundle.main.loadNibNamed("StarMainControl", owner: self, options: nil);
+//        self.addSubview(contentView)
+//        self.contentView.frame = self.bounds;
+        if self.subviews.count == 0 {
+            print("Loading Nib StarMainControl")
+            //let bundle = Bundle(forClass: self.dynamicType)
+            let bundle = Bundle(for: type(of: self))
+            let nib = UINib(nibName: "StarMainControl", bundle: bundle)
+            contentView = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
+            contentView.frame = bounds
+            contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            addSubview(contentView)
+            rateNowButton.tag = 0
+            cancelButton.tag = 1
+        }
         
     }
     
-    func customInit(){
-        Bundle.main.loadNibNamed("StarMainControl", owner: self, options: nil);
-        self.addSubview(contentView)
-        self.contentView.frame = self.bounds;
-        
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        customInit()
+        contentView.prepareForInterfaceBuilder()
+    }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        //customInit()
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
     }
     
 }
@@ -145,6 +202,7 @@ extension StarMainControl: StarRatingDelegate{
     func setRating(with point: Any) {
         if let rate = point as? Float{
             self.ratePoints.text = "\(rate)"
+            self.finaRating = rate
         }else{
             print(point)
         }

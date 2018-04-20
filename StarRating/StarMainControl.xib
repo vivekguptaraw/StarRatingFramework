@@ -12,10 +12,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StarMainControl" customModule="StarRating" customModuleProvider="target">
             <userDefinedRuntimeAttributes>
-                <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Rate The App"/>
-                <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="Here you can rate the app. This line could be multilne text for checking multiline"/>
-                <userDefinedRuntimeAttribute type="number" keyPath="totalActions">
-                    <integer key="value" value="2"/>
+                <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Title"/>
+                <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="Desc"/>
+                <userDefinedRuntimeAttribute type="string" keyPath="cancelText" value="Cancel"/>
+                <userDefinedRuntimeAttribute type="string" keyPath="rateNowText" value="RateNow"/>
+                <userDefinedRuntimeAttribute type="number" keyPath="ratingInspectable">
+                    <real key="value" value="2.2000000000000002"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                    <color key="value" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
@@ -39,44 +44,60 @@
                     <rect key="frame" x="0.0" y="10" width="375" height="667"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bX-Da-Qe2">
-                            <rect key="frame" x="20" y="20" width="335" height="20.5"/>
+                            <rect key="frame" x="20" y="20" width="335" height="0.0"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8h-lp-Q9h">
-                            <rect key="frame" x="20" y="60.5" width="335" height="20.5"/>
+                            <rect key="frame" x="20" y="40" width="335" height="0.0"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bag-7K-d44" customClass="StarRatingView" customModule="StarRating" customModuleProvider="target">
-                            <rect key="frame" x="-0.5" y="101" width="375" height="50"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <rect key="frame" x="-0.5" y="60" width="375" height="50"/>
+                            <color key="backgroundColor" red="0.93939012289047241" green="0.5644763708114624" blue="0.83300846815109253" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="qae-Mh-nX8"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="ratingWillBeSetFromOutSide">
+                                    <real key="value" value="2.2000000000000002"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                    <color key="value" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFl-KP-0Uh">
-                            <rect key="frame" x="127" y="171" width="120" height="30"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFl-KP-0Uh">
+                            <rect key="frame" x="127" y="130" width="120" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="120" id="8qy-gC-afy"/>
                                 <constraint firstAttribute="height" constant="30" id="lYk-LJ-aj4"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                            <color key="textColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="NE9-CI-0hY">
-                            <rect key="frame" x="-0.5" y="221" width="375" height="30"/>
+                            <rect key="frame" x="-0.5" y="180" width="375" height="30"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTs-Pt-oDu">
-                                    <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
-                                    <state key="normal" title="Button"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="77" height="30"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                    <state key="normal" title="Rate Now"/>
+                                    <connections>
+                                        <action selector="rateNowClicked:" destination="-1" eventType="touchUpInside" id="enR-Si-Mc5"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oj-8E-VTH">
-                                    <rect key="frame" x="329" y="0.0" width="46" height="30"/>
-                                    <state key="normal" title="Button"/>
+                                    <rect key="frame" x="320" y="0.0" width="55" height="30"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                    <state key="normal" title="Cancel"/>
+                                    <connections>
+                                        <action selector="cancelClicked:" destination="-1" eventType="touchUpInside" id="q9W-Ne-pPh"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" red="0.35085434430000001" green="0.72336632010000002" blue="0.61363670950000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -85,7 +106,7 @@
                             </constraints>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="Bag-7K-d44" firstAttribute="top" secondItem="U8h-lp-Q9h" secondAttribute="bottom" constant="20" id="3kJ-hV-Mq3"/>
                         <constraint firstItem="ZFl-KP-0Uh" firstAttribute="centerX" secondItem="Bag-7K-d44" secondAttribute="centerX" id="4j7-nV-1gh"/>

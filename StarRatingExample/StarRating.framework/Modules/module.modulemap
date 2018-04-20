@@ -1,0 +1,11 @@
+framework module StarRating {
+  umbrella header "StarRating.h"
+
+  export *
+  module * { export * }
+}
+
+module StarRating.Swift {
+    header "StarRating-Swift.h"
+    requires objc
+}
