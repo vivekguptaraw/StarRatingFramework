@@ -15,14 +15,6 @@ protocol StarMainControlDelegate {
 
 @IBDesignable
 class StarMainControl: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
     @IBOutlet weak var interactionViewHeight: NSLayoutConstraint!
     @IBOutlet weak var interactionStackView: UIStackView!
     @IBOutlet weak var ratePoints: UILabel!
@@ -111,7 +103,6 @@ class StarMainControl: UIView {
     }
     
     func setData(){
-        //self.starControl.selectedColor = UIColor.red
         self.starControl.starRatingDelegate = self
         self.checkTitleAndDescription()
     }
@@ -163,12 +154,8 @@ class StarMainControl: UIView {
         self.starMainControlDelegate?.buttonClicked(with: sender.tag, buttonText: sender.titleLabel?.text, ratePoints: self.finaRating)
     }
     func customInit(){
-//        Bundle.main.loadNibNamed("StarMainControl", owner: self, options: nil);
-//        self.addSubview(contentView)
-//        self.contentView.frame = self.bounds;
         if self.subviews.count == 0 {
             print("Loading Nib StarMainControl")
-            //let bundle = Bundle(forClass: self.dynamicType)
             let bundle = Bundle(for: type(of: self))
             let nib = UINib(nibName: "StarMainControl", bundle: bundle)
             contentView = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
@@ -189,7 +176,6 @@ class StarMainControl: UIView {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        //customInit()
     }
     
     override func awakeFromNib() {

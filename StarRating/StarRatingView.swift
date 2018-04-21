@@ -46,14 +46,12 @@ protocol StarRatingDelegate {
     }
         didSet{
             self.setUptSelectedColor()
-            //self.setStarGradientFromIBInspec(value: ratingWillBeSetFromOutSide)
         }
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.customInit()
-        //self.selectedColor = UIColor.purple
         
     }
     
@@ -217,7 +215,7 @@ protocol StarRatingDelegate {
         let r = String(format: "%.1f", _loc)
         
         self.starRatingDelegate?.setRating(with: Float(r))
-    }//String(format: "%.1f", loc)
+    }
     
     func checkPanDirection(velocity: CGPoint) -> DragDirection{
         if fabs(velocity.x) > fabs(velocity.y){
@@ -236,12 +234,8 @@ protocol StarRatingDelegate {
     }
     
     func customInit(){
-//        Bundle.main.loadNibNamed("StarRatingView", owner: self, options: nil);
-//        self.addSubview(contentVw)
-//        self.contentVw.frame = self.bounds;
         if self.subviews.count == 0 {
             print("Loading Nib StarRatingView")
-            //let bundle = Bundle(forClass: self.dynamicType)
             let bundle = Bundle(for: type(of: self))
             let nib = UINib(nibName: "StarRatingView", bundle: bundle)
             contentVw = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
@@ -261,7 +255,6 @@ protocol StarRatingDelegate {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        //self.selectedColor = UIColor.purple
     }
     
     override func awakeFromNib() {

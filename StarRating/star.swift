@@ -40,16 +40,6 @@ import UIKit
         }
         didSet {
             self.checkExstingLayer()
-//            if let _ = self.contentVw{
-//                if let layers = self.contentVw.layer.sublayers{
-//                    if layers.count > 0{
-//                        if let oldGradLayer = layers[0] as? CAGradientLayer{
-//                            oldGradLayer.removeFromSuperlayer()
-//                            addStars(yellowGrad: yellowGrad, whiteGrad: whiteGrad)
-//                        }
-//                    }
-//                }
-//            }
             
         }
     }
@@ -80,8 +70,7 @@ import UIKit
     func addStars(yellowGrad: Float,whiteGrad: Float) {
         gradlayer = self.makeGradient(yellowGrad: yellowGrad, whiteGrad: whiteGrad)
         var xMultiple: CGFloat = 0
-        var yMultiple: CGFloat = 0
-        var contentViewPos = CGPoint.zero
+        let yMultiple: CGFloat = 0
         let starPath = UIBezierPath()
         let shapeLayer = CAShapeLayer()
         starPath.move(to: CGPoint(x: xMultiple + 20.25, y: yMultiple + 0.5))
@@ -132,12 +121,7 @@ import UIKit
     }
     
     func customInitStar(){
-//        Bundle.main.loadNibNamed("star", owner: self, options: nil);
-//        self.addSubview(contentVw)
-//        self.contentVw.frame = self.bounds;
         if self.subviews.count == 0 {
-            print("Loading Nib")
-            //let bundle = Bundle(forClass: self.dynamicType)
             let bundle = Bundle(for: type(of: self))
             let nib = UINib(nibName: "star", bundle: bundle)
             contentVw = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
@@ -156,7 +140,6 @@ import UIKit
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        //self.selectedColor = UIColor.purple
     }
     
     override func awakeFromNib() {

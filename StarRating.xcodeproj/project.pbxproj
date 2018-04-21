@@ -18,8 +18,8 @@
 		E25A0BD82087C22E00AA5E4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25A0BD62087C22E00AA5E4F /* LaunchScreen.storyboard */; };
 		E25A0BE32087C22F00AA5E4F /* DemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A0BE22087C22F00AA5E4F /* DemoAppTests.swift */; };
 		E25A0BEE2087C22F00AA5E4F /* DemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A0BED2087C22F00AA5E4F /* DemoAppUITests.swift */; };
-		E25A0BF92087C25700AA5E4F /* StarRating.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FFADE0207FD261008839AD /* StarRating.framework */; };
-		E25A0BFA2087C25700AA5E4F /* StarRating.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E2FFADE0207FD261008839AD /* StarRating.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E25A0BF92087C25700AA5E4F /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		E25A0BFA2087C25700AA5E4F /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E26B461A207451E1001BD80C /* StarRating.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E26B4610207451E1001BD80C /* StarRating.framework */; };
 		E26B461F207451E1001BD80C /* StarRatingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26B461E207451E1001BD80C /* StarRatingTests.swift */; };
 		E26B4621207451E1001BD80C /* StarRating.h in Headers */ = {isa = PBXBuildFile; fileRef = E26B4613207451E1001BD80C /* StarRating.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,6 +30,8 @@
 		E26B468220745564001BD80C /* star.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26B467B20745563001BD80C /* star.swift */; };
 		E26B468320745564001BD80C /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26B467C20745563001BD80C /* StarRatingView.swift */; };
 		E26B468420745564001BD80C /* StarRatingView_ol.xib in Resources */ = {isa = PBXBuildFile; fileRef = E26B467D20745563001BD80C /* StarRatingView_ol.xib */; };
+		E2FC45B120898A570004D436 /* StarRating.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E26B4610207451E1001BD80C /* StarRating.framework */; };
+		E2FC45B220898A570004D436 /* StarRating.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E26B4610207451E1001BD80C /* StarRating.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E2FFADE3207FD27E008839AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FFADE2207FD27E008839AD /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,13 @@
 			remoteGlobalIDString = E26B460F207451E1001BD80C;
 			remoteInfo = StarRating;
 		};
+		E2FC45B320898A570004D436 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E26B4607207451E1001BD80C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E26B460F207451E1001BD80C;
+			remoteInfo = StarRating;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,7 +73,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E25A0BFA2087C25700AA5E4F /* StarRating.framework in Embed Frameworks */,
+				E25A0BFA2087C25700AA5E4F /* (null) in Embed Frameworks */,
+				E2FC45B220898A570004D436 /* StarRating.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,7 +109,6 @@
 		E26B467B20745563001BD80C /* star.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = star.swift; sourceTree = "<group>"; };
 		E26B467C20745563001BD80C /* StarRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
 		E26B467D20745563001BD80C /* StarRatingView_ol.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StarRatingView_ol.xib; sourceTree = "<group>"; };
-		E2FFADE0207FD261008839AD /* StarRating.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StarRating.framework; path = StarRatingExample/StarRatingExample/Framework/StarRating.framework; sourceTree = "<group>"; };
 		E2FFADE2207FD27E008839AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -108,7 +117,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E25A0BF92087C25700AA5E4F /* StarRating.framework in Frameworks */,
+				E25A0BF92087C25700AA5E4F /* (null) in Frameworks */,
+				E2FC45B120898A570004D436 /* StarRating.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,7 +241,6 @@
 			isa = PBXGroup;
 			children = (
 				E2FFADE2207FD27E008839AD /* Foundation.framework */,
-				E2FFADE0207FD261008839AD /* StarRating.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -265,6 +274,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E2FC45B420898A570004D436 /* PBXTargetDependency */,
 			);
 			name = DemoApp;
 			productName = DemoApp;
@@ -508,6 +518,11 @@
 			target = E26B460F207451E1001BD80C /* StarRating */;
 			targetProxy = E26B461B207451E1001BD80C /* PBXContainerItemProxy */;
 		};
+		E2FC45B420898A570004D436 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E26B460F207451E1001BD80C /* StarRating */;
+			targetProxy = E2FC45B320898A570004D436 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -533,12 +548,10 @@
 		E25A0BF12087C22F00AA5E4F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/StarRatingExample/StarRatingExample/Framework",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = DemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vivek.DemoApp;
@@ -551,12 +564,10 @@
 		E25A0BF22087C22F00AA5E4F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/StarRatingExample/StarRatingExample/Framework",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = DemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vivek.DemoApp;
@@ -753,10 +764,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/StarRatingExample/StarRatingExample/Framework",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = StarRating/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -779,10 +787,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/StarRatingExample/StarRatingExample/Framework",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = StarRating/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
