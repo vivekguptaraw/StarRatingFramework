@@ -12,9 +12,10 @@ Pod::Spec.new do |s|
           #6.
           s.author               = "Vivek gupta"
           #7.
-          s.platform            = :ios, "10.0"
+          s.platform     = :ios, '9.0'
           #8.
-          s.source              = { :git => "https://github.com/vivekguptaraw/StarRating.git" }
+          #s.source              = { :git => "git@github.com:vivekguptaraw/StarRatingFramework.git" }
+	  s.source       = { :path => '.' }
           #9.
-          s.source_files     = "StarRating", "StarRating/**/*.{h,swift,xib}"
-    end
+          s.source_files 	= '*.{swift,xib,h}'
+end  

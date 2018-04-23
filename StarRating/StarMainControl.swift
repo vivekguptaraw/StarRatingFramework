@@ -7,14 +7,21 @@
 //
 
 import UIKit
-
-protocol StarMainControlDelegate {
+public protocol StarMainControlDelegate {
     func buttonClicked(with tag: Int, buttonText: String?, ratePoints: Float?)
 }
 
 
 @IBDesignable
-class StarMainControl: UIView {
+public class StarMainControl: UIView {
+
+    /*
+    // Only override draw() if you perform custom drawing.
+    // An empty implementation adversely affects performance during animation.
+    override func draw(_ rect: CGRect) {
+        // Drawing code
+    }
+    */
     @IBOutlet weak var interactionViewHeight: NSLayoutConstraint!
     @IBOutlet weak var interactionStackView: UIStackView!
     @IBOutlet weak var ratePoints: UILabel!
@@ -25,9 +32,9 @@ class StarMainControl: UIView {
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet var contentView: UIView!
     var actionsCreated: (() -> Void)?
-    var starMainControlDelegate: StarMainControlDelegate?
+    public var starMainControlDelegate: StarMainControlDelegate?
     var finaRating: Float = 0.0
-    @IBInspectable var titleText: String = ""{
+    @IBInspectable public var titleText: String = ""{
         didSet{
             if self.titleLabel != nil{
                 self.titleLabel.isHidden = false
@@ -35,7 +42,7 @@ class StarMainControl: UIView {
             }
         }
     }
-    @IBInspectable var descriptionText: String = ""{
+    @IBInspectable public var descriptionText: String = ""{
         didSet{
             if self.descriptionLabel != nil{
                 self.descriptionLabel.isHidden = false
@@ -43,14 +50,14 @@ class StarMainControl: UIView {
             }
         }
     }
-    @IBInspectable var cancelText: String = ""{
+    @IBInspectable public var cancelText: String = ""{
         didSet{
             if self.cancelButton != nil{
                 self.cancelButton.setTitle(cancelText, for: .normal)
             }
         }
     }
-    @IBInspectable var rateNowText: String = ""{
+    @IBInspectable public var rateNowText: String = ""{
         didSet{
             if self.rateNowButton != nil{
                 self.rateNowButton.setTitle(rateNowText, for: .normal)
@@ -73,7 +80,7 @@ class StarMainControl: UIView {
             }
         }
     }
-     var totalActions: Int = 2{
+    public var totalActions: Int = 2{
         didSet{
             if actions.count > 2{
                 setActions(count: totalActions)
@@ -82,7 +89,7 @@ class StarMainControl: UIView {
         }
     }
     
-     var actions: [String] = []{
+    public var actions: [String] = []{
         didSet{
             if actions.count > 2{
                 totalActions = actions.count
@@ -91,18 +98,19 @@ class StarMainControl: UIView {
     }
     let alertController = UIAlertController(title: "Options", message: "", preferredStyle: .actionSheet)
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         self.customInit()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.customInit()
         self.setData()
     }
     
     func setData(){
+        //self.starControl.selectedColor = UIColor.red
         self.starControl.starRatingDelegate = self
         self.checkTitleAndDescription()
     }
@@ -154,8 +162,12 @@ class StarMainControl: UIView {
         self.starMainControlDelegate?.buttonClicked(with: sender.tag, buttonText: sender.titleLabel?.text, ratePoints: self.finaRating)
     }
     func customInit(){
+//        Bundle.main.loadNibNamed("StarMainControl", owner: self, options: nil);
+//        self.addSubview(contentView)
+//        self.contentView.frame = self.bounds;
         if self.subviews.count == 0 {
             print("Loading Nib StarMainControl")
+            //let bundle = Bundle(forClass: self.dynamicType)
             let bundle = Bundle(for: type(of: self))
             let nib = UINib(nibName: "StarMainControl", bundle: bundle)
             contentView = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
@@ -168,24 +180,25 @@ class StarMainControl: UIView {
         
     }
     
-    override func prepareForInterfaceBuilder() {
+    override public func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         customInit()
         contentView.prepareForInterfaceBuilder()
     }
     
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         super.draw(rect)
+        //customInit()
     }
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
     }
     
 }
 
 extension StarMainControl: StarRatingDelegate{
-    func setRating(with point: Any) {
+   public func setRating(with point: Any) {
         if let rate = point as? Float{
             self.ratePoints.text = "\(rate)"
             self.finaRating = rate

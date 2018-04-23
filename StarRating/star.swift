@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class star: UIView {
+@IBDesignable public class star: UIView {
 
     @IBOutlet var contentVw: UIView!
     var gradlayer : CAGradientLayer!
@@ -18,36 +18,23 @@ import UIKit
         addStars(yellowGrad: yellowGrad, whiteGrad: whiteGrad)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.customInitStar()
         addStars(yellowGrad: yellowGrad, whiteGrad: whiteGrad)
     }
     
-    @IBInspectable var selectedColor: UIColor = UIColor.red {
-        willSet
-        {
-                selectedColor = newValue
-        }
+    @IBInspectable public var selectedColor: UIColor = UIColor.red {
         didSet {            
                 self.checkExstingLayer()
         }
     }
-    @IBInspectable var yellowGrad: Float = 0.5{
-        willSet
-        {
-            yellowGrad = newValue
-        }
+    @IBInspectable public var yellowGrad: Float = 0.5{
         didSet {
             self.checkExstingLayer()
-            
         }
     }
     @IBInspectable var whiteGrad: Float = 0.5{
-        willSet
-        {
-            whiteGrad = newValue
-        }
         didSet {
             
         }
@@ -121,7 +108,12 @@ import UIKit
     }
     
     func customInitStar(){
+//        Bundle.main.loadNibNamed("star", owner: self, options: nil);
+//        self.addSubview(contentVw)
+//        self.contentVw.frame = self.bounds;
         if self.subviews.count == 0 {
+            print("Loading Nib")
+            //let bundle = Bundle(forClass: self.dynamicType)
             let bundle = Bundle(for: type(of: self))
             let nib = UINib(nibName: "star", bundle: bundle)
             contentVw = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
@@ -131,18 +123,19 @@ import UIKit
         }
     }
     
-    override func prepareForInterfaceBuilder() {
+    override public func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         customInitStar()
         addStars(yellowGrad: yellowGrad, whiteGrad: whiteGrad)
         contentVw.prepareForInterfaceBuilder()
     }
     
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         super.draw(rect)
+        //self.selectedColor = UIColor.purple
     }
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
     }
     

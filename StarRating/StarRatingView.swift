@@ -16,11 +16,11 @@ enum DragDirection {
     case None
 }
 
-protocol StarRatingDelegate {
+ public protocol StarRatingDelegate {
     func setRating(with point: Any)
 }
 
-@IBDesignable class StarRatingView: UIView, UIGestureRecognizerDelegate {
+@IBDesignable public class StarRatingView: UIView, UIGestureRecognizerDelegate {
 
     @IBOutlet var contentVw: UIView!
     @IBOutlet weak var star5: star!
@@ -32,7 +32,7 @@ protocol StarRatingDelegate {
     var tapGesture: UITapGestureRecognizer!
     var doubleTap: UITapGestureRecognizer!
     var dragDirection: DragDirection = .None
-    var starRatingDelegate: StarRatingDelegate?
+    public var starRatingDelegate: StarRatingDelegate?
     @IBInspectable public var selectedColor: UIColor = UIColor.red{
         
         didSet{
@@ -40,22 +40,21 @@ protocol StarRatingDelegate {
         }
     }
     
-   @IBInspectable var ratingWillBeSetFromOutSide: Float = 2.0{
-    willSet{
-        ratingWillBeSetFromOutSide = newValue
-    }
+   @IBInspectable public var ratingWillBeSetFromOutSide: Float = 2.0{
         didSet{
             self.setUptSelectedColor()
+            
         }
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.customInit()
+        //self.selectedColor = UIColor.purple
         
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.customInit()
         panGesture = UIPanGestureRecognizer(target: self, action: #selector(StarRatingView.handlePanGesture))
@@ -73,7 +72,7 @@ protocol StarRatingDelegate {
         case .began:
             return
         case .changed:
-            var ptIn = locationInView.x / (self.frame.width / 5)
+            let ptIn = locationInView.x / (self.frame.width / 5)
             let floorPointToMin = floor(ptIn)
             let starNumber = floorPointToMin + 1
             self.fillFullStar(starNum: Float(starNumber))
@@ -81,7 +80,7 @@ protocol StarRatingDelegate {
         case .cancelled:
             return
         case .ended:
-            var ptIn = locationInView.x / (self.frame.width / 5)
+            let ptIn = locationInView.x / (self.frame.width / 5)
             let floorPointToMin = floor(ptIn)
             let starNumber = floorPointToMin + 1
             self.fillFullStar(starNum: Float(starNumber))
@@ -141,16 +140,15 @@ protocol StarRatingDelegate {
     }
     
     @objc func handlePanGesture(_ gesture: UIPanGestureRecognizer) {
-        let translation = gesture.translation(in: self.contentVw)
         let locationInView: CGPoint = panGesture.location(in: self)
         let  actualVelocity = gesture.velocity(in: self)
-        let duration = Double(translation.x) / Double(actualVelocity.x)
+        
         switch gesture.state{
         case .began:
             dragDirection = self.checkPanDirection(velocity: actualVelocity)
             return
         case .changed:
-            var ptIn = locationInView.x / (self.frame.width / 5)
+            let ptIn = locationInView.x / (self.frame.width / 5)
             let floorPointToMin = floor(ptIn)
             let starNumber = floorPointToMin + 1
             self.setStarGradient(starNum: starNumber, loc: ptIn)
@@ -214,8 +212,8 @@ protocol StarRatingDelegate {
         }
         let r = String(format: "%.1f", _loc)
         
-        self.starRatingDelegate?.setRating(with: Float(r))
-    }
+        self.starRatingDelegate?.setRating(with: Float(r) ?? Float(0))
+    }//String(format: "%.1f", loc)
     
     func checkPanDirection(velocity: CGPoint) -> DragDirection{
         if fabs(velocity.x) > fabs(velocity.y){
@@ -234,8 +232,12 @@ protocol StarRatingDelegate {
     }
     
     func customInit(){
+//        Bundle.main.loadNibNamed("StarRatingView", owner: self, options: nil);
+//        self.addSubview(contentVw)
+//        self.contentVw.frame = self.bounds;
         if self.subviews.count == 0 {
             print("Loading Nib StarRatingView")
+            //let bundle = Bundle(forClass: self.dynamicType)
             let bundle = Bundle(for: type(of: self))
             let nib = UINib(nibName: "StarRatingView", bundle: bundle)
             contentVw = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
@@ -245,7 +247,7 @@ protocol StarRatingDelegate {
         }
     }
     
-    override func prepareForInterfaceBuilder() {
+    override public func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         customInit()
         setUptSelectedColor()
@@ -253,11 +255,12 @@ protocol StarRatingDelegate {
         
     }
     
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         super.draw(rect)
+        //self.selectedColor = UIColor.purple
     }
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
     }
     
@@ -274,7 +277,7 @@ protocol StarRatingDelegate {
     }
     
     func setUptSelectedColor(){
-        if let s1 = star1{
+        if (star1) != nil{
             star1.selectedColor = selectedColor
             star2.selectedColor = selectedColor
             star3.selectedColor = selectedColor
