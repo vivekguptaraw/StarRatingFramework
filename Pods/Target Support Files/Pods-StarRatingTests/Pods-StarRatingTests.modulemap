@@ -1,0 +1,6 @@
+framework module Pods_StarRatingTests {
+  umbrella header "Pods-StarRatingTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

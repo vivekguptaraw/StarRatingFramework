@@ -1,0 +1,16 @@
+PODS:
+  - StarRating (1.0.0)
+
+DEPENDENCIES:
+  - StarRating (from `../StarRatingFramework/StarRating`)
+
+EXTERNAL SOURCES:
+  StarRating:
+    :path: "../StarRatingFramework/StarRating"
+
+SPEC CHECKSUMS:
+  StarRating: e0a75cd88c1b501065e21d35a3ea87c7aafbb35f
+
+PODFILE CHECKSUM: e8e29f3153ebb6494c13cd6292c95ec968b34db0
+
+COCOAPODS: 1.5.0

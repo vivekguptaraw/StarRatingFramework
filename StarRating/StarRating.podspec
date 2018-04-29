@@ -18,4 +18,8 @@ Pod::Spec.new do |s|
 	  s.source       = { :path => '.' }
           #9.
           s.source_files 	= '*.{swift,xib,h}'
+	  s.resource_bundles = {
+    	    'StarRating' => ['*.{xib}']
+  	  }
+	  s.requires_arc = true
 end  

@@ -33,13 +33,6 @@
 		E26B468120745564001BD80C /* StarRatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E26B467A20745563001BD80C /* StarRatingView.xib */; };
 		E26B468220745564001BD80C /* star.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26B467B20745563001BD80C /* star.swift */; };
 		E26B468320745564001BD80C /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26B467C20745563001BD80C /* StarRatingView.swift */; };
-		E2FEECF1208B003600867BDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FEECF0208B003600867BDF /* AppDelegate.swift */; };
-		E2FEECF3208B003600867BDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FEECF2208B003600867BDF /* ViewController.swift */; };
-		E2FEECF6208B003600867BDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2FEECF4208B003600867BDF /* Main.storyboard */; };
-		E2FEECF8208B003600867BDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2FEECF7208B003600867BDF /* Assets.xcassets */; };
-		E2FEECFB208B003600867BDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2FEECF9208B003600867BDF /* LaunchScreen.storyboard */; };
-		E2FEED06208B003600867BDF /* DemoPodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FEED05208B003600867BDF /* DemoPodTests.swift */; };
-		E2FEED11208B003600867BDF /* DemoPodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FEED10208B003600867BDF /* DemoPodUITests.swift */; };
 		E2FFADE3207FD27E008839AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FFADE2207FD27E008839AD /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,20 +57,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = E26B460F207451E1001BD80C;
 			remoteInfo = StarRating;
-		};
-		E2FEED02208B003600867BDF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E26B4607207451E1001BD80C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E2FEECED208B003500867BDF;
-			remoteInfo = DemoPod;
-		};
-		E2FEED0D208B003600867BDF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E26B4607207451E1001BD80C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E2FEECED208B003500867BDF;
-			remoteInfo = DemoPod;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -134,17 +113,14 @@
 		E26B467A20745563001BD80C /* StarRatingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StarRatingView.xib; sourceTree = "<group>"; };
 		E26B467B20745563001BD80C /* star.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = star.swift; sourceTree = "<group>"; };
 		E26B467C20745563001BD80C /* StarRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
-		E2FEECEE208B003500867BDF /* DemoPod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoPod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FEECF0208B003600867BDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2FEECF2208B003600867BDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E2FEECF5208B003600867BDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E2FEECF7208B003600867BDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2FEECFA208B003600867BDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2FEECFC208B003600867BDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E2FEED01208B003600867BDF /* DemoPodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoPodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FEED05208B003600867BDF /* DemoPodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoPodTests.swift; sourceTree = "<group>"; };
 		E2FEED07208B003600867BDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E2FEED0C208B003600867BDF /* DemoPodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoPodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FEED10208B003600867BDF /* DemoPodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoPodUITests.swift; sourceTree = "<group>"; };
 		E2FEED12208B003600867BDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2FFADE2207FD27E008839AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -194,27 +170,6 @@
 			files = (
 				E26B461A207451E1001BD80C /* StarRating.framework in Frameworks */,
 				0F5660559D1B3ABD4B727800 /* Pods_StarRatingTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E2FEECEB208B003500867BDF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E2FEECFE208B003600867BDF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E2FEED09208B003600867BDF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,9 +249,6 @@
 				E25A0BCB2087C22E00AA5E4F /* DemoApp.app */,
 				E25A0BDE2087C22F00AA5E4F /* DemoAppTests.xctest */,
 				E25A0BE92087C22F00AA5E4F /* DemoAppUITests.xctest */,
-				E2FEECEE208B003500867BDF /* DemoPod.app */,
-				E2FEED01208B003600867BDF /* DemoPodTests.xctest */,
-				E2FEED0C208B003600867BDF /* DemoPodUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -482,59 +434,6 @@
 			productReference = E26B4619207451E1001BD80C /* StarRatingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E2FEECED208B003500867BDF /* DemoPod */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E2FEED19208B003600867BDF /* Build configuration list for PBXNativeTarget "DemoPod" */;
-			buildPhases = (
-				E2FEECEA208B003500867BDF /* Sources */,
-				E2FEECEB208B003500867BDF /* Frameworks */,
-				E2FEECEC208B003500867BDF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = DemoPod;
-			productName = DemoPod;
-			productReference = E2FEECEE208B003500867BDF /* DemoPod.app */;
-			productType = "com.apple.product-type.application";
-		};
-		E2FEED00208B003600867BDF /* DemoPodTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E2FEED1A208B003600867BDF /* Build configuration list for PBXNativeTarget "DemoPodTests" */;
-			buildPhases = (
-				E2FEECFD208B003600867BDF /* Sources */,
-				E2FEECFE208B003600867BDF /* Frameworks */,
-				E2FEECFF208B003600867BDF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E2FEED03208B003600867BDF /* PBXTargetDependency */,
-			);
-			name = DemoPodTests;
-			productName = DemoPodTests;
-			productReference = E2FEED01208B003600867BDF /* DemoPodTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		E2FEED0B208B003600867BDF /* DemoPodUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E2FEED1B208B003600867BDF /* Build configuration list for PBXNativeTarget "DemoPodUITests" */;
-			buildPhases = (
-				E2FEED08208B003600867BDF /* Sources */,
-				E2FEED09208B003600867BDF /* Frameworks */,
-				E2FEED0A208B003600867BDF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E2FEED0E208B003600867BDF /* PBXTargetDependency */,
-			);
-			name = DemoPodUITests;
-			productName = DemoPodUITests;
-			productReference = E2FEED0C208B003600867BDF /* DemoPodUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -568,20 +467,6 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
-					E2FEECED208B003500867BDF = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-					};
-					E2FEED00208B003600867BDF = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = E2FEECED208B003500867BDF;
-					};
-					E2FEED0B208B003600867BDF = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = E2FEECED208B003500867BDF;
-					};
 				};
 			};
 			buildConfigurationList = E26B460A207451E1001BD80C /* Build configuration list for PBXProject "StarRating" */;
@@ -602,9 +487,6 @@
 				E25A0BCA2087C22E00AA5E4F /* DemoApp */,
 				E25A0BDD2087C22F00AA5E4F /* DemoAppTests */,
 				E25A0BE82087C22F00AA5E4F /* DemoAppUITests */,
-				E2FEECED208B003500867BDF /* DemoPod */,
-				E2FEED00208B003600867BDF /* DemoPodTests */,
-				E2FEED0B208B003600867BDF /* DemoPodUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -645,30 +527,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E26B4617207451E1001BD80C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E2FEECEC208B003500867BDF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E2FEECFB208B003600867BDF /* LaunchScreen.storyboard in Resources */,
-				E2FEECF8208B003600867BDF /* Assets.xcassets in Resources */,
-				E2FEECF6208B003600867BDF /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E2FEECFF208B003600867BDF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E2FEED0A208B003600867BDF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -833,31 +691,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E2FEECEA208B003500867BDF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E2FEECF3208B003600867BDF /* ViewController.swift in Sources */,
-				E2FEECF1208B003600867BDF /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E2FEECFD208B003600867BDF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E2FEED06208B003600867BDF /* DemoPodTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E2FEED08208B003600867BDF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E2FEED11208B003600867BDF /* DemoPodUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -875,16 +708,6 @@
 			isa = PBXTargetDependency;
 			target = E26B460F207451E1001BD80C /* StarRating */;
 			targetProxy = E26B461B207451E1001BD80C /* PBXContainerItemProxy */;
-		};
-		E2FEED03208B003600867BDF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E2FEECED208B003500867BDF /* DemoPod */;
-			targetProxy = E2FEED02208B003600867BDF /* PBXContainerItemProxy */;
-		};
-		E2FEED0E208B003600867BDF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E2FEECED208B003500867BDF /* DemoPod */;
-			targetProxy = E2FEED0D208B003600867BDF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1214,96 +1037,6 @@
 			};
 			name = Release;
 		};
-		E2FEED13208B003600867BDF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DemoPod/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vivek.DemoPod;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		E2FEED14208B003600867BDF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DemoPod/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vivek.DemoPod;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		E2FEED15208B003600867BDF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DemoPodTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vivek.DemoPodTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DemoPod.app/DemoPod";
-			};
-			name = Debug;
-		};
-		E2FEED16208B003600867BDF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DemoPodTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vivek.DemoPodTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DemoPod.app/DemoPod";
-			};
-			name = Release;
-		};
-		E2FEED17208B003600867BDF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DemoPodUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vivek.DemoPodUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DemoPod;
-			};
-			name = Debug;
-		};
-		E2FEED18208B003600867BDF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DemoPodUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vivek.DemoPodUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DemoPod;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1357,33 +1090,6 @@
 			buildConfigurations = (
 				E26B4628207451E1001BD80C /* Debug */,
 				E26B4629207451E1001BD80C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E2FEED19208B003600867BDF /* Build configuration list for PBXNativeTarget "DemoPod" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E2FEED13208B003600867BDF /* Debug */,
-				E2FEED14208B003600867BDF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E2FEED1A208B003600867BDF /* Build configuration list for PBXNativeTarget "DemoPodTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E2FEED15208B003600867BDF /* Debug */,
-				E2FEED16208B003600867BDF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E2FEED1B208B003600867BDF /* Build configuration list for PBXNativeTarget "DemoPodUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E2FEED17208B003600867BDF /* Debug */,
-				E2FEED18208B003600867BDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

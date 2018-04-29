@@ -54,6 +54,7 @@ public class StarMainControl: UIView {
         didSet{
             if self.cancelButton != nil{
                 self.cancelButton.setTitle(cancelText, for: .normal)
+                self.cancelButton.addTarget(nil, action: #selector(btnTouch), for: UIControlEvents.touchUpInside)
             }
         }
     }
@@ -61,6 +62,7 @@ public class StarMainControl: UIView {
         didSet{
             if self.rateNowButton != nil{
                 self.rateNowButton.setTitle(rateNowText, for: .normal)
+                self.rateNowButton.addTarget(nil, action: #selector(btnTouch), for: UIControlEvents.touchUpInside)
             }
         }
     }
@@ -150,6 +152,8 @@ public class StarMainControl: UIView {
         }
         self.interactionViewHeight.constant = CGFloat( 50 * actions.count)
     }
+    
+    
     
     @objc func btnTouch(_ sender: UIButton){
         self.starMainControlDelegate?.buttonClicked(with: sender.tag, buttonText: sender.titleLabel?.text, ratePoints: self.finaRating)

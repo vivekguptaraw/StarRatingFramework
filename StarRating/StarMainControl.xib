@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -87,17 +86,11 @@
                                     <rect key="frame" x="0.0" y="0.0" width="77" height="30"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                     <state key="normal" title="Rate Now"/>
-                                    <connections>
-                                        <action selector="rateNowClicked:" destination="-1" eventType="touchUpInside" id="enR-Si-Mc5"/>
-                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oj-8E-VTH">
                                     <rect key="frame" x="320" y="0.0" width="55" height="30"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                     <state key="normal" title="Cancel"/>
-                                    <connections>
-                                        <action selector="cancelClicked:" destination="-1" eventType="touchUpInside" id="q9W-Ne-pPh"/>
-                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" red="0.35085434430000001" green="0.72336632010000002" blue="0.61363670950000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
