@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
           #1.
-          s.name               = "StarRating"
+          s.name               = "StarRatingDraggable"
           #2.
           s.version            = "1.0.1"
           #3.  
