@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
           #1.
           s.name               = "StarRating"
           #2.
-          s.version            = "1.0.0"
+          s.version            = "1.0.1"
           #3.  
           s.summary         = "Easy to use Star Rating Control with smooth draggable feature and floating point rating can be easily selected with dragging movement"
           #4.
@@ -14,12 +14,12 @@ Pod::Spec.new do |s|
           #7.
           s.platform     = :ios, '9.0'
           #8.
-          #s.source              = { :git => "git@github.com:vivekguptaraw/StarRatingFramework.git" }
-	  s.source       = { :path => '.' }
+          s.source              = { :git => "https://github.com/vivekguptaraw/StarRatingFramework.git", :tag => "#{s.version}" }
+	  #s.source       = { :path => '.' }
           #9.
-          s.source_files 	= '*.{swift,xib,h}'
+          s.source_files 	= 'StarRating/*.{swift,xib,h}'
 	  s.resource_bundles = {
-    	    'StarRating' => ['*.{xib}']
+    	    'StarRating' => ['StarRating/*.{xib}']
   	  }
 	  s.requires_arc = true
 end  
