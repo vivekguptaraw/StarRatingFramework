@@ -13,6 +13,7 @@ Pod::Spec.new do |s|
           s.author               = "Vivek gupta"
           #7.
           s.platform     = :ios, '9.0'
+	  s.swift_version = '3.2'
           #8.
           s.source              = { :git => "https://github.com/vivekguptaraw/StarRatingFramework.git", :tag => "#{s.version}" }
 	  #s.source       = { :path => '.' }
