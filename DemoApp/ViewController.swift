@@ -15,6 +15,8 @@ class ViewController: UIViewController{
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib
         ssMain.starMainControlDelegate = self
+        ssMain.rateNowButton.setTitleColor(UIColor.red, for: .normal)
+        
     }
     @IBOutlet weak var ssMain: StarMainControl!
     

@@ -24,12 +24,12 @@ public class StarMainControl: UIView {
     */
     @IBOutlet weak var interactionViewHeight: NSLayoutConstraint!
     @IBOutlet weak var interactionStackView: UIStackView!
-    @IBOutlet weak var ratePoints: UILabel!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet public weak var ratePoints: UILabel!
+    @IBOutlet public weak var titleLabel: UILabel!
+    @IBOutlet public weak var descriptionLabel: UILabel!
     @IBOutlet weak var starControl: StarRatingView!
-    @IBOutlet weak var rateNowButton: UIButton!
-    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet public weak var rateNowButton: UIButton!
+    @IBOutlet public weak var cancelButton: UIButton!
     @IBOutlet var contentView: UIView!
     var actionsCreated: (() -> Void)?
     public var starMainControlDelegate: StarMainControlDelegate?

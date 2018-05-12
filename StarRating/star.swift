@@ -56,8 +56,8 @@ import UIKit
     
     func addStars(yellowGrad: Float,whiteGrad: Float) {
         gradlayer = self.makeGradient(yellowGrad: yellowGrad, whiteGrad: whiteGrad)
-        var xMultiple: CGFloat = 0
-        let yMultiple: CGFloat = 0
+        var xMultiple: CGFloat = 8
+        let yMultiple: CGFloat = 2
         let starPath = UIBezierPath()
         let shapeLayer = CAShapeLayer()
         starPath.move(to: CGPoint(x: xMultiple + 20.25, y: yMultiple + 0.5))
@@ -76,7 +76,7 @@ import UIKit
         shapeLayer.fillColor = UIColor.white.cgColor
         shapeLayer.lineWidth = 1.0
         var frm = starPath.bounds
-        frm.size = CGSize(width: frm.size.width, height: 45)
+        frm.size = CGSize(width: frm.size.width + 11, height: 45)
         gradlayer.frame = frm
         frm.origin = CGPoint(x: 0, y: 0)
         gradlayer.startPoint = CGPoint(x: 0.0, y: 0.5)
