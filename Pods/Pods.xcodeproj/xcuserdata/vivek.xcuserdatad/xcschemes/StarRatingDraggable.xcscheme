@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "66A2E665C8A9B816483E62461F3C0441"
-               BlueprintName = "StarRating"
+               BlueprintIdentifier = "6C346BB40409EA2AFC9228F3FEA3E74F"
+               BlueprintName = "StarRatingDraggable"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "StarRating.framework">
+               BuildableName = "StarRatingDraggable.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

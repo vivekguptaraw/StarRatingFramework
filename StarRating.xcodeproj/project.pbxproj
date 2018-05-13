@@ -23,8 +23,8 @@
 		E25A0BD82087C22E00AA5E4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25A0BD62087C22E00AA5E4F /* LaunchScreen.storyboard */; };
 		E25A0BE32087C22F00AA5E4F /* DemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A0BE22087C22F00AA5E4F /* DemoAppTests.swift */; };
 		E25A0BEE2087C22F00AA5E4F /* DemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A0BED2087C22F00AA5E4F /* DemoAppUITests.swift */; };
-		E25A0BF92087C25700AA5E4F /* (null) in Frameworks */ = {isa = PBXBuildFile; };
-		E25A0BFA2087C25700AA5E4F /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E25A0BF92087C25700AA5E4F /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		E25A0BFA2087C25700AA5E4F /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E26B461A207451E1001BD80C /* StarRating.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E26B4610207451E1001BD80C /* StarRating.framework */; };
 		E26B461F207451E1001BD80C /* StarRatingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26B461E207451E1001BD80C /* StarRatingTests.swift */; };
 		E26B467E20745564001BD80C /* StarMainControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = E26B467720745563001BD80C /* StarMainControl.xib */; };
@@ -67,7 +67,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E25A0BFA2087C25700AA5E4F /* (null) in Embed Frameworks */,
+				E25A0BFA2087C25700AA5E4F /* BuildFile in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,7 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E25A0BF92087C25700AA5E4F /* (null) in Frameworks */,
+				E25A0BF92087C25700AA5E4F /* BuildFile in Frameworks */,
 				BCA3305143335F1C7B9A8F7A /* Pods_DemoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,7 +347,7 @@
 				E25A0BC82087C22E00AA5E4F /* Frameworks */,
 				E25A0BC92087C22E00AA5E4F /* Resources */,
 				E25A0BFB2087C25700AA5E4F /* Embed Frameworks */,
-				DA1729723F5E05222A3DCC5F /* [CP] Embed Pods Frameworks */,
+				695BAEF09403ABC1C61C3C69 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -572,6 +572,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		695BAEF09403ABC1C61C3C69 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DemoApp/Pods-DemoApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/StarRatingDraggable/StarRatingDraggable.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StarRatingDraggable.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoApp/Pods-DemoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A08045F0944C70FAE5B967E9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -606,24 +624,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DA1729723F5E05222A3DCC5F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DemoApp/Pods-DemoApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/StarRating/StarRating.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StarRating.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoApp/Pods-DemoApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F1E6A298F30505666CC04102 /* [CP] Check Pods Manifest.lock */ = {

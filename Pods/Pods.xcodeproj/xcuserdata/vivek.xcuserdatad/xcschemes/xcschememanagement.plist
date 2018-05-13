@@ -39,14 +39,14 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
-		<key>StarRating-StarRating.xcscheme</key>
+		<key>StarRatingDraggable-StarRating.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
-		<key>StarRating.xcscheme</key>
+		<key>StarRatingDraggable.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

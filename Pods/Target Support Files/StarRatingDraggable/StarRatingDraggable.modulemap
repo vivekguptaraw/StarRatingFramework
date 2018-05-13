@@ -1,0 +1,6 @@
+framework module StarRatingDraggable {
+  umbrella header "StarRatingDraggable-umbrella.h"
+
+  export *
+  module * { export * }
+}

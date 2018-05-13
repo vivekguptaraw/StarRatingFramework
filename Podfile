@@ -8,7 +8,7 @@ target 'DemoApp' do
   platform :ios, '9.0'
   use_frameworks!
   
-  pod 'StarRating', :path=> '../StarRatingFramework/StarRating'
+  pod 'StarRatingDraggable', :path=> '../StarRatingFramework/StarRating'
 #pod 'StarRating', :path => '../StarRating'
 #pod 'StarRating', :path => ‘../StarRatingFramework/StarRating’
 #pod 'StarRating', :podspec => '../StarRatingFramework/StarRating'

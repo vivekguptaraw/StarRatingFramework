@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0A3822A359553A51E0CA851CFA3E560A"
+               BlueprintIdentifier = "45E4B00394420CBB9ADD5BD4CB4CB5BF"
                BuildableName = "StarRating.bundle"
-               BlueprintName = "StarRating-StarRating"
+               BlueprintName = "StarRatingDraggable-StarRating"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0A3822A359553A51E0CA851CFA3E560A"
+            BlueprintIdentifier = "45E4B00394420CBB9ADD5BD4CB4CB5BF"
             BuildableName = "StarRating.bundle"
-            BlueprintName = "StarRating-StarRating"
+            BlueprintName = "StarRatingDraggable-StarRating"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

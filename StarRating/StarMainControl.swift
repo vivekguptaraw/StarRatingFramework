@@ -34,6 +34,21 @@ public class StarMainControl: UIView {
     var actionsCreated: (() -> Void)?
     public var starMainControlDelegate: StarMainControlDelegate?
     var finaRating: Float = 0.0
+    public var star1: star{
+        return starControl.star1
+    }
+    public var star2: star{
+        return starControl.star2
+    }
+    public var star3: star{
+        return starControl.star3
+    }
+    public var star4: star{
+        return starControl.star4
+    }
+    public var star5: star{
+        return starControl.star5
+    }
     @IBInspectable public var titleText: String = ""{
         didSet{
             if self.titleLabel != nil{

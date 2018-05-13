@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import StarRating
+import StarRatingDraggable
 
 class ViewController: UIViewController{
     let str : StarRatingView = StarRatingView()
@@ -16,6 +16,7 @@ class ViewController: UIViewController{
         // Do any additional setup after loading the view, typically from a nib
         ssMain.starMainControlDelegate = self
         ssMain.rateNowButton.setTitleColor(UIColor.red, for: .normal)
+        ssMain.star1.selectedColor = UIColor.orange
         
     }
     @IBOutlet weak var ssMain: StarMainControl!

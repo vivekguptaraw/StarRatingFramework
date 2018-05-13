@@ -12,6 +12,6 @@
 
 #import "StarRating.h"
 
-FOUNDATION_EXPORT double StarRatingVersionNumber;
-FOUNDATION_EXPORT const unsigned char StarRatingVersionString[];
+FOUNDATION_EXPORT double StarRatingDraggableVersionNumber;
+FOUNDATION_EXPORT const unsigned char StarRatingDraggableVersionString[];
 
