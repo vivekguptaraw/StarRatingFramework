@@ -10,6 +10,8 @@ import UIKit
 import StarRatingDraggable
 
 class ViewController: UIViewController{
+    
+    
     let str : StarRatingView = StarRatingView()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +19,12 @@ class ViewController: UIViewController{
         ssMain.starMainControlDelegate = self
         ssMain.rateNowButton.setTitleColor(UIColor.red, for: .normal)
         ssMain.star1.selectedColor = UIColor.orange
-        
+        str.frame = CGRect(x: 10, y: UIScreen.main.bounds.height - 60, width: UIScreen.main.bounds.width - 20, height: 50)
+        self.view.addSubview(str)
+        str.backgroundColor = UIColor.green
+        str.selectedColor = UIColor.purple
+        str.starRatingDelegate = self
+        str.ratingWillBeSetFromOutSide = 3.2
     }
     @IBOutlet weak var ssMain: StarMainControl!
     
@@ -29,11 +36,17 @@ class ViewController: UIViewController{
 
 }
 
+extension ViewController : StarRatingDelegate{
+    func setRating(with point: Any) {
+        print(point)
+    }
+    
+    
+}
+
 extension ViewController: StarMainControlDelegate{
     func buttonClicked(with tag: Int, buttonText: String?, ratePoints: Float?) {
         print(tag)
     }
-    
-    
 }
 

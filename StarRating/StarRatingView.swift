@@ -47,6 +47,8 @@ enum DragDirection {
         }
     }
     
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.customInit()
@@ -232,18 +234,21 @@ enum DragDirection {
     }
     
     func customInit(){
-//        Bundle.main.loadNibNamed("StarRatingView", owner: self, options: nil);
-//        self.addSubview(contentVw)
-//        self.contentVw.frame = self.bounds;
         if self.subviews.count == 0 {
-            print("Loading Nib StarRatingView")
-            //let bundle = Bundle(forClass: self.dynamicType)
             let bundle = Bundle(for: type(of: self))
             let nib = UINib(nibName: "StarRatingView", bundle: bundle)
             contentVw = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
             contentVw.frame = bounds
             contentVw.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             addSubview(contentVw)
+        }
+        if self.contentVw != nil{
+            panGesture = UIPanGestureRecognizer(target: self, action: #selector(StarRatingView.handlePanGesture))
+            panGesture.delegate = self
+            self.contentVw.addGestureRecognizer(panGesture)
+            tapGesture = UITapGestureRecognizer(target: self, action: #selector(StarRatingView.handleTapGesture))
+            tapGesture.delegate = self
+            self.contentVw.addGestureRecognizer(tapGesture)
         }
     }
     

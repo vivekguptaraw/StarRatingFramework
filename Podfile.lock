@@ -1,5 +1,5 @@
 PODS:
-  - StarRatingDraggable (1.0.2)
+  - StarRatingDraggable (1.0.3)
 
 DEPENDENCIES:
   - StarRatingDraggable (from `../StarRatingFramework/StarRating`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../StarRatingFramework/StarRating"
 
 SPEC CHECKSUMS:
-  StarRatingDraggable: 5159eedfac8d6c3390b594f8669decb0919fe086
+  StarRatingDraggable: 9549d3e75b07ea198ed701bbf36f2463521d19fa
 
 PODFILE CHECKSUM: db8bdb28cbafe926ad8c6c21ed29d1b9b39deb87
 

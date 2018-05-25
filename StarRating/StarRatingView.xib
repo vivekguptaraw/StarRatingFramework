@@ -126,7 +126,6 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.3079663212435233" green="0.3079663212435233" blue="0.3079663212435233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Mng-g2-VON" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2b5-KM-cJf"/>
                 <constraint firstItem="Mng-g2-VON" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="DEG-kH-jno"/>
