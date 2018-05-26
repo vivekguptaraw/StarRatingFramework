@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
           #1.
           s.name               = "StarRatingDraggable"
           #2.
-          s.version            = "1.0.3"
+          s.version            = "v1.0.5"
           #3.  
           s.summary         = "Easy to use Star Rating Control with smooth draggable feature and floating point rating can be easily selected with dragging movement"
           #4.
